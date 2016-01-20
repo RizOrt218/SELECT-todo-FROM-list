@@ -84,7 +84,9 @@ WHERE title LIKE '%mistake%';
 DELETE FROM tasks
 WHERE title LIKE '%mistake%';
 
- \dt
+-- select all fields of all tasks sorted by title in ascending order
+SELECT * FROM tasks
+ORDER BY title ASC;
 
 SELECT * FROM tasks;
 
