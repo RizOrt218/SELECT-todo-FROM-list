@@ -25,7 +25,7 @@ ALTER TABLE tasks ADD COLUMN completed_at timestamp NULL DEFAULT NULL;
 
 -- to change column to not allow Null values and have default value of now()
 ALTER TABLE tasks ALTER COLUMN updated_at SET NOT NULL;
-ALTER TABLE tasks ALTER COLUMN updated_at DEFAULT now();
+ALTER TABLE tasks ALTER COLUMN updated_at SET DEFAULT now();
 
 -- insert new task
 INSERT INTO tasks ( title, description, created_at, updated_at, completed_at )
@@ -35,7 +35,11 @@ VALUES ( 'Study SQL', 'Complete this exercise', now(), now(), NULL );
 INSERT INTO tasks ( title, description )
 VALUES ( 'Study PostgreSQL', 'Read all the documentation' );
 
-SELECT * FROM tasks;
+-- select all the titles of tasks that are not yet completed
+SELECT title FROM tasks WHERE completed_at IS NULL;
+
+
+-- SELECT * FROM tasks;
 
 -- select column_name, data_type
 -- from information_schema.columns
