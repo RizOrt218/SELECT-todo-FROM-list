@@ -68,6 +68,10 @@ VALUES ( 'mistake 2', 'another test entry' );
 INSERT INTO tasks ( title, description )
 VALUES ( 'third mistake', 'another test entry' );
 
+-- select title fields of all tasks with a title that includes the word 'mistake'
+SELECT * FROM tasks
+WHERE title LIKE '%mistake%';
+
 SELECT * FROM tasks;
 
 -- select column_name, data_type
