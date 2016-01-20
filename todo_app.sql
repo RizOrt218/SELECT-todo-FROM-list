@@ -56,7 +56,13 @@ ORDER BY created_at DESC;
 INSERT INTO tasks ( title, description )
 VALUES ( 'mistake 1', 'a test entry' );
 
-SELECT * FROM tasks;
+-- create a new task
+-- title = 'mistake 2'
+-- description = 'another test entry'
+INSERT INTO tasks ( title, description )
+VALUES ( 'mistake 2', 'another test entry' );
+
+-- SELECT * FROM tasks;
 
 -- select column_name, data_type
 -- from information_schema.columns
