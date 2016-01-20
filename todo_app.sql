@@ -50,7 +50,13 @@ SELECT title, description FROM tasks WHERE completed_at IS NULL;
 SELECT * FROM tasks
 ORDER BY created_at DESC;
 
--- SELECT * FROM tasks;
+-- create a new task
+-- title = 'mistake 1'
+-- description = 'a test entry'
+INSERT INTO tasks ( title, description )
+VALUES ( 'mistake 1', 'a test entry' );
+
+SELECT * FROM tasks;
 
 -- select column_name, data_type
 -- from information_schema.columns
