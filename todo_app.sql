@@ -72,7 +72,14 @@ VALUES ( 'third mistake', 'another test entry' );
 SELECT * FROM tasks
 WHERE title LIKE '%mistake%';
 
-SELECT * FROM tasks;
+-- delete the task that has a title of mistake 1
+DELETE FROM tasks
+WHERE title= 'mistake 1';
+
+-- select title and description fields of all tasks with a title that includes the word 'mistake'
+SELECT * FROM tasks
+WHERE title, description LIKE '%mistake%';
+-- SELECT * FROM tasks;
 
 -- select column_name, data_type
 -- from information_schema.columns
