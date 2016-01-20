@@ -43,7 +43,14 @@ UPDATE tasks
 SET completed_at= now()
 WHERE title= 'Study SQL';
 
-SELECT * FROM tasks;
+-- select all titles and descriptions of tasks that are not yet completed
+SELECT title, description FROM tasks WHERE completed_at IS NULL;
+
+
+-- select all fields of every task sorted by creation date in descending order
+-- SELECT * FROM tasks WHERE created_at > 0;
+
+-- SELECT * FROM tasks;
 
 -- select column_name, data_type
 -- from information_schema.columns
