@@ -23,4 +23,13 @@ ALTER TABLE tasks DROP COLUMN completed;
 
 ALTER TABLE tasks ADD COLUMN completed_at timestamp NULL DEFAULT NULL;
 
-ALTER TABLE tasks ALTER COLUMN updated_at NOT NULL DEFAULT now();
+-- to change column to not allow Null values and have default value of now()
+ALTER TABLE tasks ALTER COLUMN updated_at SET NOT NULL;
+ALTER TABLE tasks ALTER COLUMN updated_at DEFAULT now();
+
+
+
+
+select column_name, data_type
+from information_schema.columns
+where table_name = 'tasks';
