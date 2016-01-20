@@ -1,1 +1,4 @@
 DROP USER IF EXISTS Michael;
+
+CREATE USER Michael WITH ENCRYPTED PASSWORD 'stonebreaker';
+
