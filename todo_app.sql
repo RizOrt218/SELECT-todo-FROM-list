@@ -77,9 +77,16 @@ DELETE FROM tasks
 WHERE title= 'mistake 1';
 
 -- select title and description fields of all tasks with a title that includes the word 'mistake'
-SELECT * FROM tasks
-WHERE title, description LIKE '%mistake%';
--- SELECT * FROM tasks;
+SELECT title, description FROM tasks
+WHERE title LIKE '%mistake%';
+
+-- delete all tasks that includes the word 'mistake' in the title
+DELETE FROM tasks
+WHERE title LIKE '%mistake%';
+
+ \dt
+
+SELECT * FROM tasks;
 
 -- select column_name, data_type
 -- from information_schema.columns
