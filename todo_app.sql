@@ -31,6 +31,10 @@ ALTER TABLE tasks ALTER COLUMN updated_at DEFAULT now();
 INSERT INTO tasks ( title, description, created_at, updated_at, completed_at )
 VALUES ( 'Study SQL', 'Complete this exercise', now(), now(), NULL );
 
+-- create new task for title and description
+INSERT INTO tasks ( title, description )
+VALUES ( 'Study PostgreSQL', 'Read all the documentation' );
+
 SELECT * FROM tasks;
 
 -- select column_name, data_type
